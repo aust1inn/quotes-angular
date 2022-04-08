@@ -15,7 +15,8 @@
               <div class="votes">
                   <button  (click)="upVote(i,quote)">Like</button>
                   <p>{{quote.upvote}}</p>
-                  <button (click)="downVote(i)">Dislike</button>
+                  <button (click)="downVote(i,quote)">Dislike</button>
+                  <p>{{quote.downvote}}</p>
               </div>
               <button class="btn btn-primary" (click)="deleteQuote(i) ">Delete Quote</button>
             </div>
