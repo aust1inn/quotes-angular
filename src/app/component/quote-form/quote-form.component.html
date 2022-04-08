@@ -1,26 +1,29 @@
 <p>Please add a quote below</p>
 
-<form (ngSubmit)="submitQuote()" #goalForm='ngForm'>
+<form (ngSubmit)="submitQuote()" #quoteForm='ngForm'>
     <div class="form-group">
 
-        <input type="text" required class="form-control" id="name" placeholder="your name">
+        <input type="text" required class="form-control" id="name" placeholder="your name" name="name" [(ngModel)]="newQuote.name" #name='ngModel' >
+        <div *ngIf="name.touched && !name.valid" class="alert alert-danger">
+            <p>Name of person submitting is required</p>
+          </div>
 
     </div>
 
     <div class="form-group">
 
-        <input type="text" required class="form-control" id="author" placeholder="author">
+        <input type="text" required class="form-control" id="author" placeholder="author" name="author">
 
     </div>
 
     <div class="form-group">
 
-        <textarea class="form-control" id="quote" rows="2" required placeholder="the quote"></textarea>
+        <textarea class="form-control" id="quote" rows="2" required placeholder="the quote" name="author"></textarea>
 
     </div>
     <div class="form-group date">
         <label for="complete">date created</label>
-        <input type='date' id="complete" required>
+        <input type='date' id="complete" required name="author">
 
     </div>
 
