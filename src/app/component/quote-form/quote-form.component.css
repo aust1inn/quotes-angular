@@ -1,0 +1,9 @@
+.form-control , .date{
+    margin-top: 4%;
+    width: 70%;
+}
+
+.btn-primary {
+    margin-top: 4%;
+    background-color: green;
+}
