@@ -13,10 +13,20 @@ export class QuotesComponent implements OnInit {
   ];
 
   addNewQuote(quote:any) {
+    // let quoteLength = this.quotes.length;
+    // quote.id = quoteLength+1;
+    // quote.completeDate = new Date(quote.completeDate)
+    // this.quotes.push(quote)
+
+    if (quote.name=="" || quote.quoteWords=="") {
+      alert("please input required fields")
+    }
+    else {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote)
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+    }
   }
   constructor() { }
 
