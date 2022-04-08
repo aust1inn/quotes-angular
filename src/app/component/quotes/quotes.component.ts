@@ -9,7 +9,7 @@ import { Quotes } from 'src/app/model/quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[] = [
-    new Quotes(1,"Austin" , "Peter Drury" , "Whatever he touches turns into goal",new Date(2021,3,14))
+    new Quotes(1,"Austin" , "Peter Drury" , "Whatever he touches turns into goal",0,new Date(2021,3,14))
   ];
 
   addNewQuote(quote:any) {
@@ -28,6 +28,15 @@ export class QuotesComponent implements OnInit {
 
   deleteQuote (index:number) {
     this.quotes.splice(index,1)
+  }
+  
+
+  upVote(index:number,quote:Quotes) {
+    let up=quote.upvote++
+  }
+
+  downVote (index:number) {
+
   }
   constructor() { }
 
