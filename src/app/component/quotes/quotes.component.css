@@ -1,5 +1,8 @@
 
+* {
+    font-family: 'Patrick Hand', cursive;
 
+}
 .votes {
     justify-content: space-around;
 };
