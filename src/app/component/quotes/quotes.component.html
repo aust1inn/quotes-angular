@@ -11,7 +11,7 @@
               <h6 id={{i}} >Name:{{quote.name}}</h6>
               <h6>Author:{{quote.author}}</h6>
               <p  appHighlight>Quote:{{quote.quoteWords}}</p>
-              <p>Days since it was posted - {{quote.creationDate}}</p>
+              <p>Days since it was posted - {{quote.creationDate|daysPast}}</p>
               <div class="votes">
                   <button class="btn-vote btn btn-primary" (click)="upVote(i,quote)">Like</button>
                   <p>{{quote.upvote}}</p>

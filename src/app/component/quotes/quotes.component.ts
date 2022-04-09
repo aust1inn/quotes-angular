@@ -9,7 +9,8 @@ import { Quotes } from 'src/app/model/quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[] = [
-    new Quotes(1,"Austin" , "Peter Drury" , "Whatever he touches turns into goal",0,0,new Date(2021,3,14))
+    new Quotes(1,"Austin" , "Peter Drury" , "Whatever he touches turns into goal",0,0,new Date(2022,3,1)),
+    new Quotes(2,"Peter Orina","Martin Kruger","Stay firm,stay cool",0,0,new Date(2022,1,30))
   ];
 
   addNewQuote(quote:any) {
